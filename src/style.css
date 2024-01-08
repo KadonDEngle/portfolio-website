@@ -22,6 +22,7 @@ button {
   border: initial;
   outline: initial;
   background-color: initial;
+  color: inherit;
 }
 
 input {
@@ -55,6 +56,20 @@ input {
   display: none;
 }
 
+.spacer-line--dark {
+  background: #413A3B;
+  height: 4px;
+  width: 70px;
+  margin: 25px 0 100px 0;
+}
+
+.spacer-line--light {
+  background: #EFE6DD;
+  height: 4px;
+  width: 70px;
+  margin: 25px 0 100px 0;
+}
+
 /* HERO */
 .hero {
   width: 100%;
@@ -65,3 +80,154 @@ input {
   align-items: center;
 }
 
+.hero__heading {
+  text-align: center;
+  font-size: 40px;
+  font-weight: lighter;
+}
+
+.hero__name {
+  color: #BB4430;
+  font-weight: bold;
+}
+
+.hero__btn {
+  margin-top: 20px;
+  border: 2px solid #EFE6DD;
+  box-sizing: inherit;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  padding: 10px 15px;
+  transition: all 0.3s;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.hero__btn:hover {
+  border-color: #7EBDC2;
+  background-color: #7EBDC2;
+  color: #413A3B;
+}
+
+/* NAV BAR */
+.nav-bar {
+  background-color: #231F20;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  border-bottom: 4px solid #7EBDC2;
+  position: sticky;
+  top: 0;
+}
+
+.nav-bar__page-link {
+  display: inline;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 12px 20px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: color 0.3s;
+}
+
+.nav-bar__page-link:hover {
+  color: #BB4430;
+}
+
+.nav-bar__page-link--active {
+  color: #BB4430;
+}
+
+/* ABOUT ME */
+.about {
+  height: 100vh;
+  background-color: #EFE6DD;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 100px;
+}
+
+.about__heading {
+  color: #413A3B;
+  font-size: 40px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* PROJECTS */
+.projects {
+  height: 100vh;
+  background-color: #F3DFA2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 100px;
+}
+
+.projects__heading {
+  color: #413A3B;
+  font-size: 40px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* ADVENTURES */
+.adventures {
+  height: 100vh;
+  background-color: #7EBDC2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 100px;
+}
+
+.adventures__heading {
+  color: #413A3B;
+  font-size: 40px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* CONTACT */
+.contact {
+  height: 100vh;
+  background-color: #413A3B;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 100px;
+}
+
+.contact__heading {
+  color: #EFE6DD;
+  font-size: 40px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* FOOTER */
+.footer {
+  background-color: #231F20;
+  padding: 70px 0 50px 0;
+}
+
+.footer__icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.footer__icon__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__icon {
+  width: 55px;
+  height: 55px;
+}
