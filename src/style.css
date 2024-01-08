@@ -157,6 +157,26 @@ input {
   letter-spacing: 1px;
 }
 
+.about__content {
+  max-width: 1000px;
+  display: flex;
+  gap: 20px;
+}
+
+.about__image-containeir {
+  flex: 1;
+}
+
+.about__image {
+  max-width: 300px;
+  height: auto;
+}
+
+.about__text {
+  flex: 2;
+  color:#413A3B;
+}
+
 /* PROJECTS */
 .projects {
   height: 100vh;
@@ -212,6 +232,7 @@ input {
 .footer {
   background-color: #231F20;
   padding: 70px 0 50px 0;
+  text-align: center;
 }
 
 .footer__icons {
@@ -219,15 +240,39 @@ input {
   justify-content: center;
   align-items: center;
   text-align: center;
+  gap: 25px;
 }
 
 .footer__icon__container {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #413A3B;
+  transition: all 0.3s;
+}
+
+.footer__icon__container:hover {
+  background-color: #7EBDC2;
+  color:#413A3B;
 }
 
 .footer__icon {
   width: 55px;
   height: 55px;
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__footnote {
+  color:#efe6ddb0;
+  margin-top: 35px;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.footer__footnote__year {
+  color: #BB4430;
 }
