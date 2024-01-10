@@ -1,42 +1,68 @@
-// import {
-//     navBarEl,
-//     heroSectionEl,
-//     aboutSectionEl,
-//     projectsSectionEl,
-//     adventuresSectionEl,
-//     contactSectionEl,
-// } from '../constants.js';
+import {
+    navBarEl,
+    navBarMenuEl,
+    heroSectionEl,
+    aboutSectionEl,
+    projectsSectionEl,
+    adventuresSectionEl,
+    contactSectionEl,
+} from '../constants.js';
 
-// const sections = {
-//     'hero': heroSectionEl,
-//     'about': aboutSectionEl,
-//     'projects': projectsSectionEl,
-//     'adventures': adventuresSectionEl,
-//     'contact': contactSectionEl
-// };
+const sections = {
+    'hero': heroSectionEl,
+    'about': aboutSectionEl,
+    'projects': projectsSectionEl,
+    'adventures': adventuresSectionEl,
+    'contact': contactSectionEl
+};
 
+const clickHandler = event => {
+    event.preventDefault();
 
-// const clickHandler = event => {
-//     event.preventDefault();
+    const clickedLink = event.target.closest('.nav-bar__menu-link');
+    const toggleBtn = event.target.closest('.nav-bar__toggle-btn');
+ 
+    if (clickedLink) {
+        scrollToLink(clickedLink);
+    } else if (toggleBtn) {
+        toggleDropdown();
+    }
+};
 
-//     const target = event.target.dataset.target;
+const scrollHandler = () => {
+    const scrollPosition = window.scrollY;
     
-//     if (target && sections[target]) {
-//         sections[target].scrollIntoView({behavior: 'smooth'});
-//     }
-// };
+    for (const [sectionName, sectionEl] of Object.entries(sections)) {
+        const sectionTop = sectionEl.offsetTop;
 
-// const checkActiveSection =  () => {
-//     for (const [key, section] of Object.entries(sections)) {
-//         const rect = section.getBoundingClientRect();
-//         if (rect.top <= 0) {
-//             document.querySelector('.nav-bar__page-link--active')?.classList.remove('nav-bar__page-link--active');
-//             document.querySelector(`[data-target=${key}]`)?.classList.add('nav-bar__page-link--active');
-//         }
-//     }
-// };
+        if (scrollPosition >= sectionTop) {
+            const activeLink = document.querySelector(`[data-target="${sectionName}"]`);
+            toggleActiveLink(activeLink);
+        }
+    }
+};
 
+const scrollToLink = link => {
+    const target = link.dataset.target;
 
-// navBarEl.addEventListener('click', clickHandler);
+    if (target && sections[target]) {
+        // only toggle the menu if it's currently expanded
+        if (navBarMenuEl.classList.contains('nav-bar__menu--expanded')) toggleDropdown();
+        sections[target].scrollIntoView({behavior: 'smooth'});
+    }
+}
 
-// window.addEventListener('scroll', checkActiveSection);
+const toggleDropdown = () => {
+    navBarMenuEl.classList.toggle('nav-bar__menu--expanded');
+};
+
+const toggleActiveLink = link => {
+    document.querySelectorAll('.nav-bar__menu-link--active').forEach(element => {
+        element.classList.remove('nav-bar__menu-link--active');
+    });
+    link.classList.toggle('nav-bar__menu-link--active');
+}
+
+navBarEl.addEventListener('click', clickHandler);
+
+window.addEventListener('scroll', scrollHandler);

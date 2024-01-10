@@ -31,6 +31,15 @@ input {
   font: inherit;
 }
 
+/* KEYFRAMES */
+@keyframes down{
+  0% { opacity:0 }
+  25% { opacity:1 }
+  75% { opacity:0 }
+  100% { opacity:0 }
+}
+
+
 /* FONTS */
 @font-face {
   font-family: 'caviar_dreams';
@@ -74,16 +83,19 @@ input {
 .hero {
   width: 100%;
   height: 100vh;
+  padding: 0 3rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 50px;
 }
 
 .hero__heading {
   text-align: center;
   font-size: 40px;
   font-weight: lighter;
+  letter-spacing: 1px;
 }
 
 .hero__name {
@@ -92,7 +104,6 @@ input {
 }
 
 .hero__btn {
-  margin-top: 20px;
   border: 2px solid #EFE6DD;
   box-sizing: inherit;
   cursor: pointer;
@@ -101,7 +112,7 @@ input {
   font-weight: bold;
   letter-spacing: 1px;
   padding: 10px 15px;
-  transition: all 0.3s;
+  transition: all 0.2s;
   background-color: rgba(0, 0, 0, 0);
 }
 
@@ -111,20 +122,62 @@ input {
   color: #413A3B;
 }
 
+.hero__arrow {
+	width: 60px;
+	height: 82px;
+}
+
+.hero__arrow__path {
+	stroke: #BB4430;
+	stroke-width: 2px;
+	fill: transparent;	
+	animation: down 2s infinite;
+}
+
+.hero__arrow__path:nth-child(1){	animation-delay:-1s; }
+.hero__arrow__path:nth-child(2){	animation-delay:-.5s; }
+.hero__arrow__path:nth-child(3){	animation-delay:0s; }
+
 /* NAV BAR */
 .nav-bar {
   background-color: #231F20;
   border-bottom: 4px solid #7EBDC2;
   position: sticky;
   top: 0;
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  flex-flow: row normal;
+}
+
+.nav-bar__toggle-btn {
+  display: none;
+  margin-right: 20px;
+  font-size: 25px;
+  cursor: pointer;
 }
 
 .nav-bar__menu {
   display: flex;
+  flex-basis: 100%;
+  flex-grow: 1;
 }
 
-.nav-bar__ham-btn {
-  float: right;
+.nav-bar__menu-link {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  padding: 20px 15px;
+  transition: all 0.3s;
+}
+
+.nav-bar__menu-link--active {
+  color: #BB4430;
+}
+
+.nav-bar__menu-link:hover {
+  color: #BB4430;
 }
 
 /* ABOUT ME */
@@ -290,6 +343,35 @@ input {
 
 /* RESPONSIVE DESIGN */
 @media screen and (max-width: 850px) {
+  .nav-bar {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .nav-bar__menu {
+    height: 0;
+    background-color:#231F20;
+    border-bottom: 4px solid #7EBDC2;
+    padding: 0 1rem;
+    overflow: hidden;
+    flex-direction: column;
+    transition: all 0.3s;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    z-index: 0;
+  }
+
+  .nav-bar__menu--expanded {
+    height: 250px;
+    z-index: 1;
+  }
+
+  .nav-bar__toggle-btn {
+    display: block;
+  }
+
   .spacer-line--dark {
     margin-bottom: 50px;
   }
