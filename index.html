@@ -2,13 +2,79 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="./ke.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-    <script type="module" crossorigin src="./assets/index-FdoZH_wP.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-X4m0RMh6.css">
+    <title>Kadon Engle</title>
+
+    <script src="https://kit.fontawesome.com/876d628d73.js" crossorigin="anonymous"></script>
+    <script type="module" crossorigin src="./assets/index-CKLee163.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-9PNP8BsV.css">
   </head>
-  <body>
-    <div id="app"></div>
+
+  <body class="body">
+    <section class="hero">
+      <h1 class="hero__heading">Hi, I'm <span class="hero__name">Kadon Engle</span>.<br/><br/>I develop software and systems to help<br/>companies reach their full potential.</h1>
+      <button class="hero__btn">More about me</button>
+      <svg class="hero__arrow">
+        <path class="hero__arrow__path" d="M0 0 L30 22 L60 0"></path>
+        <path class="hero__arrow__path" d="M0 20 L30 42 L60 20"></path>
+        <path class="hero__arrow__path" d="M0 40 L30 62 L60 40"></path>
+      </svg>
+    </section>
+
+    <nav class="nav-bar">
+      <a href="#" data-target="hero" class="nav-bar__menu-link">HOME</a>
+      <button class="nav-bar__toggle-btn"><i class="fa-solid fa-bars"></i></button>
+      <div class="nav-bar__menu">
+        <a href="#" data-target="about" class="nav-bar__menu-link">ABOUT</a>
+        <a href="#" data-target="projects" class="nav-bar__menu-link">PROJECTS</a>
+        <a href="#" data-target="adventures" class="nav-bar__menu-link">ADVENTURES</a>
+        <a href="#" data-target="contact" class="nav-bar__menu-link">CONTACT</a>
+      </div>
+    </nav>
+
+    <section class="about">
+      <h2 class="about__heading">About Me</h2>
+      <div class="spacer-line--dark"></div>
+      <div class="about__content">
+        <div class="about__image-container"><img src="./assets/K_A-Sn1LojwJ.jpg" alt="Portrait of Kadon and Ashley smiling together." class="about__image"></div>
+        <div class="about__text">
+          <div class="about__work">
+            <h3 class="about__work__heading">Work</h3>
+            <p class="about__work__paragraph">I'm currently doing front-end web development and graphic design for Patio Roof Riser in Springfield, OR. I always have a side project and am constantly looking for new ways to expand my skill set.</p>
+          </div>
+          <div class="about__play">
+            <h3 class="about__play__heading">Play</h3>
+            <p class="about__play__paragraph">I live in the PNW, so I do all of the things you'd expect. I'm a rock climber, rafter, snowboarder and all around enjoyer of the outdoors!</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="projects">
+      <h2 class="projects__heading">Projects</h2>
+      <div class="spacer-line--dark"></div>
+    </section>
+
+    <section class="adventures">
+      <h2 class="adventures__heading">Adventures</h2>
+      <div class="spacer-line--dark"></div>
+    </section>
+
+    <section class="contact">
+      <h2 class="contact__heading">Contact</h2>
+      <div class="spacer-line--light"></div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer__icons">
+        <a href="https://www.instagram.com/kadon_engle" class="footer__icon__container"><i class="fa-brands fa-instagram footer__icon"></i></a>
+        <a href="https://www.facebook.com/KadonDEngle" class="footer__icon__container"><i class="fa-brands fa-facebook-f footer__icon"></i></a>
+        <a href="https://github.com/KadonDEngle" class="footer__icon__container"><i class="fa-brands fa-github footer__icon"></i></a>
+        <a href="https://www.linkedin.com/in/kadondengle/" class="footer__icon__container"><i class="fa-brands fa-linkedin-in footer__icon"></i></a>
+      </div>
+      <div class="footer__footnote">KADON ENGLE <span class="footer__footnote__year">©2024</span></div>
+    </footer>
+
   </body>
 </html>
