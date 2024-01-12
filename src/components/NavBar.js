@@ -6,7 +6,7 @@ import {
     projectsSectionEl,
     adventuresSectionEl,
     contactSectionEl,
-} from '../constants.js';
+} from '../common.js';
 
 const sections = {
     'hero': heroSectionEl,

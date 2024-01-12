@@ -5,6 +5,7 @@
     <link rel="icon" type="image/svg+xml" href="/ke.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kadon Engle</title>
+    <meta name="description" content="Software developer passionate about helping companies reach their full potential. Explore my portfolio to learn more about me.">
 
     <script src="https://kit.fontawesome.com/876d628d73.js" crossorigin="anonymous"></script>
   </head>
@@ -72,6 +73,8 @@
       <div class="contact-note">Have a question or want to work together?</div>
 
       <form class="form">
+        <div class="form__spinner"></div>
+        <div class="form__success-msg">Message sent!<br/>I'll get back to you soon.</div>
         <label for="name" class="form__label" place>Name</label>
         <input type="text" name="name" id="name" class="form__input" placeholder="Your Name" required>
 
@@ -82,6 +85,7 @@
         <textarea name="description" id="message" class="form__input" placeholder="Message..." required></textarea>
 
         <button type="submit" class="form__submit-btn">Send</button>
+        <div class="form__error-msg">There was an error sending your message.</div>
       </form>
     </section>
 

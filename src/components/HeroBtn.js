@@ -1,7 +1,7 @@
 import {
     heroBtnEl,
     aboutSectionEl,
-} from '../constants.js';
+} from '../common.js';
 
 const clickHandler = () => {
     aboutSectionEl.scrollIntoView({behavior: 'smooth'});

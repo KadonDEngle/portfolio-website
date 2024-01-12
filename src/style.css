@@ -46,6 +46,15 @@ textarea {
   100% { opacity:0 }
 }
 
+@keyframes spinner {
+  0% {
+    transform: translateX(-50%) rotate(0deg);
+  }
+  100% {
+    transform: translateX(-50%) rotate(360deg);
+  }
+}
+
 
 /* FONTS */
 @font-face {
@@ -156,6 +165,7 @@ textarea {
   align-items: center;
   padding: 0 1rem;
   flex-flow: row normal;
+  z-index: 1;
 }
 
 .nav-bar__toggle-btn {
@@ -323,6 +333,11 @@ textarea {
   flex-direction: column;
   width: 100%;
   max-width: 500px;
+  position: relative;
+}
+
+.form--hidden {
+  visibility: hidden;
 }
 
 .form__label {
@@ -333,9 +348,18 @@ textarea {
 
 .form__input {
   background-color: #EFE6DD;
+  border: 2px solid #EFE6DD;
   padding: 10px;
   border-radius: 5px;
   margin-bottom: 20px;
+}
+
+.form__input:focus {
+  border: 2px solid #BB4430;
+}
+
+.form__input:disabled {
+  opacity: 20%;
 }
 
 textarea.form__input {
@@ -353,7 +377,19 @@ textarea.form__input {
   letter-spacing: 1px;
   padding: 10px 15px;
   transition: all 0.2s;
+  transition: visibility 0s;
   background-color: rgba(0, 0, 0, 0);
+}
+
+.form__submit-btn:disabled {
+  opacity: 20%;
+}
+
+.form__submit-btn:disabled:hover {
+  border: 2px solid #EFE6DD;
+  color: #EFE6DD;
+  background-color: rgba(0, 0, 0, 0);
+  cursor: default;
 }
 
 .form__submit-btn:hover {
@@ -362,6 +398,57 @@ textarea.form__input {
   color: #413A3B;
 }
 
+.form__spinner {
+  position: absolute;
+  border-radius: 50%;
+  animation: spinner 1s infinite linear;
+  visibility: hidden;
+  left: 50%;
+  top: 25%;
+  width: 85px;
+  height: 85px;
+  border-top: 5px solid #EFE6DD;
+  border-right: 5px solid #EFE6DD;
+  border-bottom: 5px solid #EFE6DD;
+  border-left: 5px solid #BB4430;
+}
+
+.form__spinner--visible {
+  visibility: visible;
+}
+
+.form__success-msg {
+  position: absolute;
+  visibility: hidden;
+  left: 50%;
+  top: 25%;
+  transform: translateX(-50%);
+  color: #EFE6DD;
+  text-align: center;
+  line-height: 30px;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  width: 100%;
+}
+
+.form__success-msg--visible {
+  visibility: visible;
+}
+
+.form__error-msg {
+  margin-top: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-align: center;
+  visibility: hidden;
+  color: #BB4430;
+}
+
+.form__error-msg--visible {
+  visibility: visible;
+}
 
 /* FOOTER */
 .footer {
@@ -384,6 +471,7 @@ textarea.form__input {
   align-items: center;
   background-color: #413A3B;
   transition: all 0.3s;
+  border-radius: 5px;
 }
 
 .footer__icon__container:hover {
