@@ -287,12 +287,11 @@ textarea {
 
 /* ADVENTURES */
 .adventures {
-  height: 100vh;
   background-color: #7EBDC2;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 100px;
+  padding: 100px 20px;
 }
 
 .adventures__heading {
@@ -300,6 +299,78 @@ textarea {
   font-size: 40px;
   font-weight: bold;
   letter-spacing: 1px;
+}
+
+.adventure-map {
+  width: 100%;
+  max-width: 800px;
+  height: 500px;
+  border-radius: 10px;
+}
+
+.adventure-map__icon {
+  font-size: 27px;
+  color: #BB4430;
+  transform: rotate(25deg) scale(0.8, 1);
+  text-shadow: 2px 2px 5px #000;
+  transition: all 0.3s;
+}
+
+.adventure-map__icon:hover {
+  color:#EFE6DD;
+}
+
+.adventure-map__info-window {
+  font-family: 'caviar_dreams', sans-serif;
+  color: #413A3B;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.adventure-map__info-window__title {
+
+}
+
+.adventure-map__info-window__btn {
+  color:#413A3B;
+  font-family: 'caviar_dreams', sans-serif;
+  border: 2px solid #413A3B;
+  border-radius: 5px;
+  box-sizing: inherit;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  padding: 10px 15px;
+  transition: all 0.2s;
+  transition: visibility 0s;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.adventure-map__info-window__btn:hover {
+  color: #BB4430;
+}
+
+.adventure-details {
+  visibility: hidden;
+  width: 100%;
+  height: 100vh;
+  background-color: #413A3B;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  padding: 20px;
+}
+
+.adventure-details--visible {
+  visibility: visible;
+}
+
+.adventure-details__close-btn {
+  cursor: pointer;
+  margin-left: auto;
 }
 
 /* CONTACT */

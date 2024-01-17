@@ -35,7 +35,7 @@ const scrollHandler = () => {
     for (const [sectionName, sectionEl] of Object.entries(sections)) {
         const sectionTop = sectionEl.offsetTop;
 
-        if (scrollPosition >= sectionTop) {
+        if (scrollPosition >= (sectionTop - 10)) {
             const activeLink = document.querySelector(`[data-target="${sectionName}"]`);
             toggleActiveLink(activeLink);
         }

@@ -9,6 +9,10 @@ export const heroBtnEl = document.querySelector('.hero__btn');
 export const navBarEl = document.querySelector('.nav-bar');
 export const navBarMenuEl = document.querySelector('.nav-bar__menu');
 
+// ADVENTURE MAP DOM ELEMENTS
+export const adventureMapEl = document.querySelector('.adventure-map');
+export const adventureDetailsEl = document.querySelector('.adventure-details');
+
 // FORM DOM ELEMENTS
 export const formEl = document.querySelector('.form');
 export const formSpinnerEl = document.querySelector('.form__spinner');
