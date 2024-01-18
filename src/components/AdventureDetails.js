@@ -3,6 +3,7 @@ import {
 } from '../common.js';
 
 const renderAdventureDetails = adventure => {
+    console.log(adventure);
     const adventureDetailsHTML = `
         <i class='fa-solid fa-x adventure-details__close-btn'></i>
         <h3 class='adventure-details__title'>${adventure.title}</h3>
@@ -11,8 +12,8 @@ const renderAdventureDetails = adventure => {
                 <div class='adventure-details__visit'>
                     <p class='adventure-details__visit__date'>${visit.date}</p>
                     <div class='adventure-details__visit__images'>
-                        ${Object.keys(visit.images).map(image => `
-                            <img src=${image} class='adventure-details__visit__image'>
+                        ${Object.values(visit.images).map(image => `
+                            <img src=${image.default} class='adventure-details__visit__image'>
                         `).join('')}
                     </div>
                 </div>

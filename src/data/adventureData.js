@@ -8,7 +8,7 @@ const adventureData = [
         visits: [
             {
                 date: "Sept 11, 2022",
-                images: import.meta.glob('/src/data/adventure_images/multnomah_falls/*.jpg')
+                images: Object.values(import.meta.glob('/src/data/adventure_images/multnomah_falls/*.jpg', {eager: true}))
             }
         ]
     },
