@@ -6,6 +6,18 @@ const renderAdventureDetails = adventure => {
     const adventureDetailsHTML = `
         <i class='fa-solid fa-x adventure-details__close-btn'></i>
         <h3 class='adventure-details__title'>${adventure.title}</h3>
+        <div class='adventure-details__visits'>
+            ${adventure.visits.map(visit => `
+                <div class='adventure-details__visit'>
+                    <p class='adventure-details__visit__date'>${visit.date}</p>
+                    <div class='adventure-details__visit__images'>
+                        ${Object.keys(visit.images).map(image => `
+                            <img src=${image} class='adventure-details__visit__image'>
+                        `).join('')}
+                    </div>
+                </div>
+            `).join('')}
+        </div>
     `;
 
     adventureDetailsEl.innerHTML = adventureDetailsHTML;
