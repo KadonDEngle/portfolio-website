@@ -2,15 +2,18 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="./ke.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+    <link rel="manifest" href="./site.webmanifest">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kadon Engle</title>
     <meta name="description" content="Software developer passionate about helping companies reach their full potential. Explore my portfolio to learn more about me.">
 
     <script src="https://kit.fontawesome.com/876d628d73.js" crossorigin="anonymous"></script>
-    <script type="module" crossorigin src="./assets/index-7SADHZmJ.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-aBC1Ui_-.css">
-  </head>
+    <script type="module" crossorigin src="./assets/index-wT91UwtU.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-pq2a-ioj.css">
+  </head> 
 
   <body class="body">
     <section class="hero">
@@ -66,6 +69,8 @@
     <section class="adventures">
       <h2 class="adventures__heading">Adventures</h2>
       <div class="spacer-line--dark"></div>
+      <div class="adventure-map"></div>
+      <div class="adventure-details"></div>
     </section>
 
     <section class="contact">
@@ -101,5 +106,9 @@
       <div class="footer__footnote">KADON ENGLE <span class="footer__footnote__year">©2024</span></div>
     </footer>
 
+    <script>
+      (g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})
+      ({key: "AIzaSyC1LtpIXWBo_80PA4o5_L9KZHHfBbFYcFA", v: "weekly"});
+    </script>
   </body>
 </html>
