@@ -16,7 +16,7 @@ const initMap = async () => {
     const { AdvancedMarkerElement } = await google.maps.importLibrary('marker');
 
     map = new Map(adventureMapEl, {
-        zoom: 3,
+        zoom: 4,
         center: position,
         mapId: 'c95a1b32bd31296b',
         disableDefaultUI: true,
