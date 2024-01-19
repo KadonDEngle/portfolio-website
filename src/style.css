@@ -394,27 +394,84 @@ textarea {
   margin-bottom: 15px;
 }
 
-.adventure-details__visits {
+.adventure-details__dates {
+  margin-bottom: 20px;
+}
 
+.adventure-details__date-btn {
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.adventure-details__date-btn:hover {
+  background-color: #231F20;
+  cursor: pointer;
+}
+
+.adventure-details__date-btn:disabled {
+  background-color: #BB4430;
+  cursor: default;
 }
 
 .adventure-details__visit {
-
+  display: none;
+  flex-direction: column;
+  align-items: center;
 }
 
-.adventure-details__visit__date {
-
+.adventure-details__visit--visible {
+  display: flex;
 }
 
-.adventure-details__visit__images {
-
+.adventure-details__note {
+  margin-bottom: 20px;
+  padding: 15px 20px;
+  background-color: #231F20;
+  border-radius: 5px;
+  max-width: 500px;
+  width: fit-content;
 }
 
-.adventure-details__visit__image {
-  width: 100px;
-  height: auto;
+.adventure-details__note-text {
+  font-style: italic;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.adventure-details__images {
+  max-width: 500px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.adventure-details__main-image {
+  max-width: 100%;
+  width: 500px;
+  height: 500px;
   object-fit: cover;
   border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.adventure-details__image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 5px;
+  opacity: 50%;
+}
+
+.adventure-details__image:hover {
+  opacity: 100%;
+  cursor: pointer;
+}
+
+.adventure-details__image--selected {
+  opacity: 100%;
+  cursor: default;
+  border: 2px solid #EFE6DD;
 }
 
 /* CONTACT */
