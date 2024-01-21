@@ -22,7 +22,7 @@ const adventureData = [
         visits: [
             {
                 date: "Sept 17, 2022",
-                note: "Two incredibly unique waterfalls. Super fun hike.",
+                note: "Two incredibly unique waterfalls with enjoyable hikes.",
                 images: Object.values(import.meta.glob('/src/data/adventure_images/gold_and_silver_falls/*.jpg', { eager: true })).map(module=> module.default)
             },
         ]
@@ -50,7 +50,7 @@ const adventureData = [
         visits: [
             {
                 date: "Aug 19, 2022",
-                note: "I cannot believe a waterfall this massive and beautiful has been right here and I've never visited it.",
+                note: "I cannot believe I hadn't visited this waterfall sooner. Might be my favorite in Oregon.",
                 images: Object.values(import.meta.glob('/src/data/adventure_images/salt_creek_falls/*.jpg', { eager: true })).map(module => module.default)
             },
         ]
@@ -64,7 +64,7 @@ const adventureData = [
         visits: [
             {
                 date: "Jan 14, 2022",
-                note: "Three step waterfall in Cascadia State Park. Much taller than I expected it to be. Beautiful campground, need to come back and stay at campsite A12.",
+                note: "Three step waterfall in Cascadia State Park. Much taller than we expected it to be. Beautiful campground, need to come back and stay at campsite A12.",
                 images: Object.values(import.meta.glob('/src/data/adventure_images/lower_soda_falls/*.jpg', { eager: true })).map(module => module.default)
             },
         ]
@@ -85,6 +85,104 @@ const adventureData = [
                 date: "Jul 15, 2023",
                 note: "Decided to pack rope for the entire hike in 90+ degree weather. Forgot ATC anyways...",
                 images: Object.values(import.meta.glob('/src/data/adventure_images/smith_rock/07-15-23/*.jpg', { eager: true })).map(module => module.default)
+            },
+        ]
+    },
+    {
+        title: "Blue Pool",
+        location: {
+            lat: 44.311949, 
+            lng: -122.027170 
+        },
+        visits: [
+            {
+                date: "Jan 6, 2024",
+                note: "First hike of the new year!",
+                images: Object.values(import.meta.glob('/src/data/adventure_images/blue_pool/01-06-24/*.jpg', { eager: true })).map(module => module.default)
+            },
+        ]
+    },
+    {
+        title: "Lake Apopka Loop Trail",
+        location: {
+            lat: 28.641725, 
+            lng: -81.560460
+        },
+        visits: [
+            {
+                date: "Dec 26, 2023",
+                note: "We were able to make it down to the lake just in time to catch the sunset before turning back.",
+                images: Object.values(import.meta.glob('/src/data/adventure_images/lake_apopka_loop_trail/12-26-23/*.jpg', { eager: true })).map(module => module.default)
+            },
+        ]
+    },
+    {
+        title: "Patjens Lake Trail",
+        location: {
+            lat: 44.374111, 
+            lng: -121.882970
+        },
+        visits: [
+            {
+                date: "Oct 7, 2023",
+                note: "The Mt. Washington wilderness is gorgeous, however, the bees made for a perilous 7 miles.",
+                images: Object.values(import.meta.glob('/src/data/adventure_images/patjens_lake_trail/10-07-23/*.jpg', { eager: true })).map(module => module.default)
+            },
+        ]
+    },
+    {
+        title: "Oakland Nature Preserve",
+        location: {
+            lat: 28.561243, 
+            lng: -81.640470
+        },
+        visits: [
+            {
+                date: "Aug 14, 2023",
+                note: "Gator spotted.",
+                images: Object.values(import.meta.glob('/src/data/adventure_images/oakland_nature_preserve/08-14-23/*.jpg', { eager: true })).map(module => module.default)
+            },
+        ]
+    },
+    {
+        title: "Clear Lake",
+        location: {
+            lat: 44.363812, 
+            lng: -121.989123
+        },
+        visits: [
+            {
+                date: "June 11, 2023",
+                note: "Snagged the last campsite at Coldwater Cove. We kayaked, hiked and enjoyed a couple days of relaxation. Also, peanut butter hot dog.",
+                images: Object.values(import.meta.glob('/src/data/adventure_images/clear_lake/06-11-23/*.jpg', { eager: true })).map(module => module.default)
+            },
+        ]
+    },
+    {
+        title: "Silver Falls State Park",
+        location: {
+            lat: 44.888106, 
+            lng: -122.650740
+        },
+        visits: [
+            {
+                date: "Apr 29, 2023",
+                note: "Ten waterfalls on a single hike. Including four that you walk behind.",
+                images: Object.values(import.meta.glob('/src/data/adventure_images/silver_falls_state_park/04-29-23/*.jpg', { eager: true })).map(module => module.default)
+            },
+        ]
+    },
+    {
+        title: "Natural Bridges",
+        location: {
+            lat: 42.189806, 
+            lng: -124.365915
+        },
+        visits: [
+            {
+                date: "Mar 25, 2023",
+                note: "The first stop on our trip to the Redwoods.",
+                images: Object.values(import.meta.glob('/src/data/adventure_images/natural_bridges/03-25-23/*.jpg', { eager: true })).map(module => module.default)
             },
         ]
     },
