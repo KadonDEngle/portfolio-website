@@ -63,10 +63,9 @@ const renderErrorMsg = () => {
 };
 
 const toggleLoading = loading => {
-    formNameInputEl.disabled = loading;
-    formEmailInputEl.disabled = loading;
-    formMessageInputEl.disabled = loading;
-    formSubmitBtnEl.disabled = loading;
+    [formNameInputEl, formEmailInputEl, formMessageInputEl, formSubmitBtnEl].forEach(el => {
+        el.disabled = loading;
+    });
 
     formSpinnerEl.classList.toggle('form__spinner--visible', loading);
 };
