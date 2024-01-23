@@ -7,7 +7,8 @@ import {
     formEmailInputEl,
     formMessageInputEl,
     formSubmitBtnEl,
-    AWS_API_URL,
+    WEB3FORMS_URL,
+    WEB3FORMS_PUBLIC_KEY,
     sendEmail,
     DEFAULT_DISPLAY_TIME,
 } from '../common.js';
@@ -20,15 +21,17 @@ const submitHandler = async event => {
     const message = formMessageInputEl.value;
 
     const postData = {
+        access_key: WEB3FORMS_PUBLIC_KEY,
+        subject: 'Website From Submission',
         name: name,
         email: email,
-        description: message
+        message: message
     };
 
     toggleLoading(true);
 
     try {
-        const result = await sendEmail(AWS_API_URL, postData);
+        const result = await sendEmail(WEB3FORMS_URL, postData);
 
         clearInputFields();
         renderSuccessMsg();

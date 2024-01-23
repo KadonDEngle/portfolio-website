@@ -1,5 +1,6 @@
 // CONSTANTS
-export const AWS_API_URL = 'https://ejyvytm3z8.execute-api.us-west-2.amazonaws.com/email123/simpleemail';
+export const WEB3FORMS_URL = 'https://api.web3forms.com/submit';
+export const WEB3FORMS_PUBLIC_KEY = 'cf497880-c07b-46a0-8853-688c01fe174e';
 export const DEFAULT_DISPLAY_TIME = 3000; //ms
 
 // HERO DOM ELEMENTS
