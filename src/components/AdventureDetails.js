@@ -3,6 +3,7 @@ import {
 } from '../common.js';
 
 const renderAdventureDetails = adventure => {
+    console.log(adventure);
     const adventureDetailsHTML = `
         <i class='fa-solid fa-x adventure-details__close-btn'></i>
         <h3 class='adventure-details__title'>${adventure.title}</h3>
