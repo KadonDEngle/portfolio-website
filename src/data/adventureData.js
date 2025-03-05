@@ -53,6 +53,11 @@ const adventureData = [
                 note: "I cannot believe I hadn't visited this waterfall sooner. Might be my favorite in Oregon.",
                 images: Object.values(import.meta.glob('/src/data/adventure_images/salt_creek_falls/08-19-22/*.webp', { eager: true })).map(module => module.default)
             },
+            {
+                date: "Nov 10, 2024",
+                note: "Even on a gloomy day, this waterfall is magnificent.",
+                images: Object.values(import.meta.glob('/src/data/adventure_images/salt_creek_falls/11-10-24/*.webp', { eager: true })).map(module => module.default)
+            },
         ]
     },
     {
