@@ -59,4 +59,4 @@ If you'd like to run the project locally, follow these steps:
 
 ## 📜 License
 
-This project is open-source and available under the [MIT License](LICENSE.txt). Feel free to explore the code and use it as a reference for your own projects!
+This project is open-source and available under the [MIT License](LICENSE). Feel free to explore the code and use it as a reference for your own projects!
