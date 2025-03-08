@@ -270,7 +270,7 @@ textarea {
 
 /* PROJECTS */
 .projects {
-  height: 100vh;
+  height: 60vh;
   background-color: #F3DFA2;
   display: flex;
   flex-direction: column;
@@ -283,6 +283,12 @@ textarea {
   font-size: 40px;
   font-weight: bold;
   letter-spacing: 1px;
+}
+
+.projects__temp-content {
+  color: #413A3B;
+  font-size: 30px;
+  margin-top: 50px;
 }
 
 /* ADVENTURES */
